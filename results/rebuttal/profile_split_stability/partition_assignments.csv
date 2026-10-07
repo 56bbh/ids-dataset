@@ -1,0 +1,7 @@
+"partition","partition_source","split_seed","profile_train","profile_val","profile_test","run_train","run_val","run_test","profile_overlap","run_overlap"
+"partition_01_seed101","new","101","56","11","17","342","68","100","0","0"
+"partition_02_seed202","new","202","56","11","17","334","68","108","0","0"
+"partition_03_seed303","new","303","56","11","17","337","68","105","0","0"
+"partition_04_seed404","new","404","56","11","17","342","68","100","0","0"
+"partition_05_seed505","new","505","56","11","17","345","68","97","0","0"
+"partition_00_seed42_existing","existing","42","56","11","17","342","64","104","0","0"

@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# IDE and temporary files
+.idea/
+.vscode/
+*.swp
+*.tmp
+*.log
+
+# Raw traffic and generated model artifacts
+*.pcap
+*.pcapng
+*.npy
+*.npz
+*.pt
+*.pth
+
+# Large or generated directories
+data/
+checkpoints/
+experiment_logs/
+pilot_results/
+validation_experiments/
+__pycache__/
+
+# Large third-party wordlists are intentionally not redistributed
+rockyou_raw.txt
+pass_massive.txt
+

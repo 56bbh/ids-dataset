@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+BASE_DIR="$HOME/thesis_dataset"
+SCRIPTS_DIR="$BASE_DIR/scripts"
+# PCAP_DIR="$BASE_DIR/pcap"
+PCAP_DIR="/mnt/hgfs/dataset/pcap/ssh"
+export PCAP_DIR
+LOGS_DIR="$BASE_DIR/logs"
+METADATA_DIR="$BASE_DIR/metadata"
+NOTES_DIR="$BASE_DIR/notes"
+
+VICTIM_HOST_ALIAS="metasploitable2"
+VICTIM_IP="192.168.9.131"
+CAPTURE_IFACE="eth0"
+TIMEZONE_NAME="UTC"
+
+TCPDUMP_SNAPLEN=0
+TCPDUMP_FILTER="host ${VICTIM_IP}"
+
+# These are dataset-level processing rules, not run-level metadata.
+WINDOW_SIZE_SEC=3
+WINDOW_STRIDE_SEC=3
+SEQUENCE_LENGTH=10
+SEQUENCE_STRIDE=1
+MIXED_LABEL_VALUE=-1
+
+# Normal profiles: 15 minutes total each.
+NORMAL_TOTAL_SEC=900
+
+# normal_idle: mostly quiet, tiny background traffic.
+NORMAL_IDLE_PRE_IDLE_SEC=240
+NORMAL_IDLE_PING_SEC=30
+NORMAL_IDLE_HTTP_LIGHT_SEC=90
+NORMAL_IDLE_POST_IDLE_SEC=540
+
+# normal_web: web-centric, with controlled randomness.
+NORMAL_WEB_TOTAL_ACTIVE_SEC=660
+NORMAL_WEB_POST_IDLE_SEC=240
+NORMAL_WEB_MIN_SEG_SEC=20
+NORMAL_WEB_MAX_SEG_SEC=90
+
+# normal_admin: light admin/ops style traffic.
+NORMAL_ADMIN_PRE_IDLE_SEC=90
+NORMAL_ADMIN_PING_SEC=60
+NORMAL_ADMIN_HTTP_SEC=120
+NORMAL_ADMIN_FTP_SEC=180
+NORMAL_ADMIN_SSH_SEC=120
+NORMAL_ADMIN_POST_IDLE_SEC=330
+
+# Scanning-syn profile
+SCAN_PRE_IDLE_SEC=60
+SCAN_LOOP_COUNT=6
+SCAN_LOOP_SLEEP_SEC=5
+SCAN_POST_IDLE_SEC=90
+NMAP_SYN_ARGS="-sS -Pn -T3"
+
+METADATA_CSV="$METADATA_DIR/run_metadata.csv"

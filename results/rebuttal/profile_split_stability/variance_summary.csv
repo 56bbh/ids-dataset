@@ -1,0 +1,2 @@
+metric,partitions,model_seeds_per_partition,grand_mean,model_seed_sd,split_selection_sd,min_partition_mean,max_partition_mean
+test_macro_f1,6,5,0.8638320180942043,0.04972881750119428,0.07134137539215972,0.7421859493548633,0.936710855205025

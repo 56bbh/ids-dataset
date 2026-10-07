@@ -1,0 +1,15 @@
+dimension,group,n_sequences,scope_n_sequences,proportion_within_scope,n_runs,n_true_classes
+behavior_activity,all_active,8098,8671,0.9339176565563372,88,9
+behavior_activity,mixed_active_idle,530,8671,0.06112328451159036,88,9
+behavior_activity,all_idle,43,8671,0.004959058932072425,1,1
+boundary_vs_non_boundary,boundary_near,530,8671,0.06112328451159036,88,9
+boundary_vs_non_boundary,non_boundary,8141,8671,0.9388767154884097,88,9
+boundary_type,attack_start,262,8671,0.030215661400069198,88,9
+boundary_type,attack_end,268,8671,0.030907623111521162,88,9
+boundary_type,start_and_end,0,8671,0.0,0,0
+boundary_type,non_boundary,8141,8671,0.9388767154884097,88,9
+packet_activity_supplement,all_packet_active,1106,8671,0.12755160881097913,16,6
+packet_activity_supplement,mixed_packet_active_idle,7327,8671,0.8450005766347596,88,9
+packet_activity_supplement,all_packet_idle,238,8671,0.027447814554261332,15,5
+packet_mixed_boundary_supplement,boundary_near,545,7327,0.07438242118192985,86,9
+packet_mixed_boundary_supplement,non_boundary,6782,7327,0.9256175788180702,87,9
